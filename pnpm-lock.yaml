@@ -22,8 +22,8 @@ importers:
         specifier: ^5.2.1
         version: 5.2.3(vite@6.2.2(sass-embedded@1.86.0))(vue@3.5.13)
       lanse:
-        specifier: ^0.0.6
-        version: 0.0.6(vue@3.5.13)
+        specifier: ^0.0.7
+        version: 0.0.7(vue@3.5.13)
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -723,8 +723,8 @@ packages:
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
 
-  lanse@0.0.6:
-    resolution: {integrity: sha512-nZEtkW4CGUoWO+aXezYDjrY5r+Kp47V1BjaUbiENpPrkLximt6tMtpEgikSXgPWbKvvh80k4ibBgmrc4s/T18g==}
+  lanse@0.0.7:
+    resolution: {integrity: sha512-mGIXE7z+kj3ithGEA2asHjwJ2qYer7M5Ur7w1j0jeGN/VZTsHCYtq7nF/CZEhYow4a4NZxAVfe/P2yfod9eg6w==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
@@ -1770,7 +1770,7 @@ snapshots:
 
   kolorist@1.8.0: {}
 
-  lanse@0.0.6(vue@3.5.13):
+  lanse@0.0.7(vue@3.5.13):
     dependencies:
       vue: 3.5.13
 

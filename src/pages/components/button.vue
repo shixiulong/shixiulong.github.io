@@ -2,13 +2,13 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2025-03-19 14:05:55
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2025-03-21 17:36:22
+ * @LastEditTime : 2025-04-02 21:21:30
  * @FilePath     : /hc_web_component/packages/vuetify/dev/pages/components/button.vue
  * @Description  :
 -->
 <template>
   <v-expansion-panels v-model="isShow">
-    <!-- <v-expansion-panel value="type">
+    <v-expansion-panel value="type">
       <template #title>
         <h2>Types</h2>
       </template>
@@ -38,7 +38,49 @@
           </v-col>
         </v-row>
       </template>
-    </v-expansion-panel> -->
+    </v-expansion-panel>
+
+    <v-expansion-panel value="icon">
+      <template #title>
+        <h2>Icons</h2>
+      </template>
+      <template #text>
+        <v-row>
+          <v-col cols="2">
+            <v-btn icon="mdi-plus" variant="elevated" />
+          </v-col>
+          <v-col cols="2">
+            <v-btn icon="mdi-plus" variant="outlined" />
+          </v-col>
+          <v-col cols="2">
+            <v-btn icon="mdi-plus" variant="text" />
+          </v-col>
+          <v-col cols="2">
+            <v-btn color="grey" icon="mdi-plus" variant="outlined" />
+          </v-col>
+          <v-col cols="2">
+            <v-btn color="red" icon="mdi-plus" variant="elevated" />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="2">
+            <v-btn icon="mdi-plus" variant="elevated" disabled />
+          </v-col>
+          <v-col cols="2">
+            <v-btn icon="mdi-plus" variant="outlined" disabled />
+          </v-col>
+          <v-col cols="2">
+            <v-btn icon="mdi-plus" variant="text" disabled />
+          </v-col>
+          <v-col cols="2">
+            <v-btn color="grey" icon="mdi-plus" variant="outlined" disabled />
+          </v-col>
+          <v-col cols="2">
+            <v-btn color="red" icon="mdi-plus" variant="elevated" disabled />
+          </v-col>
+        </v-row>
+      </template>
+    </v-expansion-panel>
 
     <v-expansion-panel value="variant">
       <template #title>
@@ -104,6 +146,12 @@
           </v-col>
         </v-row>
       </template>
+      <div class="description">
+        <ul>
+          <li>组件 icon 大小暂时不支持 css 样式控制 </li>
+          <li>button 不支持 small，只能单个手动覆盖样式 </li>
+        </ul>
+      </div>
     </v-expansion-panel>
 
     <!-- <v-expansion-panel value="variant">
@@ -292,7 +340,7 @@
 
 <script setup>
   import { ref } from 'vue'
-  const isShow = ref(['type', 'variant', 'size', 'state', 'position', 'menu'])
+  const isShow = ref(['type', 'icon', 'variant', 'size', 'state', 'position', 'menu'])
 </script>
 
 <style scoped lang="scss">
