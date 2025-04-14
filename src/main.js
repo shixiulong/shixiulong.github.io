@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import '@mdi/font/css/materialdesignicons.css'
-
+// import '@mdi/font/css/materialdesignicons.css'
+// import './assets/font-family/index.css'
 import 'lanse/styles'
 import { createVuetify } from 'lanse'
 import * as components from 'lanse/components'
