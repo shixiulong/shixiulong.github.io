@@ -27,6 +27,17 @@
       <div>
         <v-text-field variant="outlined" clearable @update:model-value="search" />
       </div>
+      <p>
+        图标分为空心和实心图标，两种方式切换，在v-icon组件中增加fill属性，例如：
+        <span>{{'<v-icon fill icon="11mp" />'}}</span>，
+        ，或者在名字结尾追加   _fill 结尾，都是实心图标，反之都是空心图标
+      </p>
+      <br>
+      <p>
+        Icons are categorized into hollow and solid icons, which can be switched between. To create a solid icon, you can add the `fill` attribute to the `v-icon` component, for example:
+        `{{'<v-icon fill icon="11mp" />'}}`,
+        or append `_fill` at the end of the name. Conversely, if neither of these is present, the icon will be hollow
+      </p>
     </div>
   </div>
   <div class="icon-list">
@@ -39,7 +50,7 @@
     icon="content_copy"
   >
     {{ copyText }}
-    <v-icon :icon="selectIcon" />
+    <v-icon :fill="fill" :icon="selectIcon" />
   </v-snackbar>
 </template>
 
@@ -53,7 +64,9 @@
   const selectIcon = ref(undefined)
 
   const list = computed(() => {
-    return iconList.filter(item => item.version === 325 && (searchText.value.toLowerCase() ? item.name.includes(searchText.value.toLowerCase()) : true))
+    return iconList.filter(item => item.version >= 325 &&
+      (searchText.value ? item.tags.includes(searchText.value.toLowerCase()) : true)
+    )
   })
 
   const copyTextLegacy = text => {

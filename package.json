@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "lanse": "^0.0.15",
+    "lanse": "^0.0.17",
     "prettier": "3.5.3",
     "vite": "^6.2.1",
     "vite-plugin-vue-devtools": "^7.7.2"

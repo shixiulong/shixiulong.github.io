@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2025-03-19 10:56:30
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2025-04-09 16:33:21
+ * @LastEditTime : 2025-04-14 17:08:51
  * @FilePath     : /hc_web_component/packages/vuetify/dev/pages/home.vue
  * @Description  :
 -->
@@ -24,10 +24,11 @@
           :items="items"
           item-title="name"
           item-value="id"
+          style="overflow-y: auto;height: 100%;padding-bottom: 100px"
           @click:select="select"
         >
           <template #prepend="{item}">
-            <v-icon :color="item.color" :icon="item.icon" fill/>
+            <v-icon :color="item.color" :icon="item.icon" fill />
           </template>
         </v-list>
       </v-card>
@@ -60,9 +61,12 @@
   import Checkbox from './components/checkbox.vue'
   import Select from './components/select.vue'
   import Switch from './components/switch.vue'
+  import TextFields from './components/text-fields.vue'
+  import TextFieldsShow from './components/text-fields-show.vue'
 
   const items = ref([
     { name: 'EmptyState (空状态)', id: 'EmptyState', icon: 'circle', color: 'blue' },
+    { name: 'TextFieldsDisplay (文本显示)', id: 'TextFieldsShow', icon: 'circle', color: 'green' },
     { name: 'Alert (警告框)', id: 'Alert', icon: 'circle', color: 'green' },
     { name: 'Snackbar (消息条)', id: 'Snackbar', icon: 'circle', color: 'green' },
     { name: 'Radio (单选按钮)', id: 'Radio', icon: 'circle', color: 'green' },
@@ -79,6 +83,7 @@
     { name: 'Checkboxs (复选框)', id: 'Checkbox', icon: 'circle', color: 'green' },
     { name: 'Selects (下拉选择框)', id: 'Select', icon: 'circle', color: '#b80b0b' },
     { name: 'Switch (开关)', id: 'Switch', icon: 'circle', color: 'green' },
+    { name: 'TextFields (单行文本框)', id: 'TextFields', icon: 'circle', color: '#615ced' },
   ])
 
   const list = {
@@ -99,8 +104,9 @@
     Checkbox,
     Select,
     Switch,
+    TextFieldsShow,
   }
-  const key = ref('Icons')
+  const key = ref('TextFieldsShow')
 
   const select = ({ id }) => {
     key.value = id
