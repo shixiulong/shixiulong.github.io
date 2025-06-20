@@ -19,8 +19,8 @@ importers:
         specifier: ^5.2.1
         version: 5.2.3(vite@6.2.2(sass-embedded@1.86.0))(vue@3.5.13)
       lanse:
-        specifier: ^0.0.17
-        version: 0.0.17(vue@3.5.13)
+        specifier: file:/Volumes/web/hc_web_component/packages/vuetify
+        version: vuetify-src@file:../hc_web_component/packages/vuetify(vue@3.5.13)
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -714,22 +714,6 @@ packages:
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
 
-  lanse@0.0.17:
-    resolution: {integrity: sha512-+UlnDOmn01qCvk5GFaYnkK7EYC6upZFdpAMkhhLyLSwf2kmqEhCzHqEbQJOsorJ1ZeiQnlPj5jDoKivXlpdFTQ==}
-    engines: {node: ^12.20 || >=14.13}
-    peerDependencies:
-      typescript: '>=4.7'
-      vite-plugin-vuetify: '>=1.0.0'
-      vue: ^3.3.0
-      webpack-plugin-vuetify: '>=2.0.0'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-      vite-plugin-vuetify:
-        optional: true
-      webpack-plugin-vuetify:
-        optional: true
-
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
@@ -1094,6 +1078,22 @@ packages:
       typescript: '*'
     peerDependenciesMeta:
       typescript:
+        optional: true
+
+  vuetify-src@file:../hc_web_component/packages/vuetify:
+    resolution: {directory: ../hc_web_component/packages/vuetify, type: directory}
+    engines: {node: ^12.20 || >=14.13}
+    peerDependencies:
+      typescript: '>=4.7'
+      vite-plugin-vuetify: '>=1.0.0'
+      vue: ^3.3.0
+      webpack-plugin-vuetify: '>=2.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vite-plugin-vuetify:
+        optional: true
+      webpack-plugin-vuetify:
         optional: true
 
   which@2.0.2:
@@ -1764,10 +1764,6 @@ snapshots:
 
   kolorist@1.8.0: {}
 
-  lanse@0.0.17(vue@3.5.13):
-    dependencies:
-      vue: 3.5.13
-
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
@@ -2083,6 +2079,10 @@ snapshots:
       '@vue/runtime-dom': 3.5.13
       '@vue/server-renderer': 3.5.13(vue@3.5.13)
       '@vue/shared': 3.5.13
+
+  vuetify-src@file:../hc_web_component/packages/vuetify(vue@3.5.13):
+    dependencies:
+      vue: 3.5.13
 
   which@2.0.2:
     dependencies:

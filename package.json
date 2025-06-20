@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "lanse": "^0.0.17",
+    "lanse": "file:/Volumes/web/hc_web_component/packages/vuetify",
     "prettier": "3.5.3",
     "vite": "^6.2.1",
     "vite-plugin-vue-devtools": "^7.7.2"
